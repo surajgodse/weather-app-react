@@ -86,7 +86,7 @@ const Weather = () => {
           <p>Min Temperature: {currentWeather.main.temp_min}°C</p>
           <p>Max Temperature: {currentWeather.main.temp_max}°C</p>
           <p>{currentWeather.weather[0].description}</p>
-          <img src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`} alt="Weather Icon" />
+          <img src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`} alt="Weather Icon" />
         </div>
       )}
 
@@ -94,7 +94,7 @@ const Weather = () => {
         {forecast.map((weather, index) => (
           <div key={index} className="forecast-item">
             <h4>{new Date(weather.dt_txt).toLocaleDateString("en-US", { weekday: 'long' })}</h4>
-            <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="Weather Icon" />
+            <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt="Weather Icon" />
             <p>{weather.main.temp}°C</p>
           </div>
         ))}
