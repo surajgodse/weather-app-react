@@ -14,11 +14,11 @@ const Weather = () => {
       setError(null); // Reset error state
 
       const currentWeatherResponse = await axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       );
 
       const forecastResponse = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       );
 
       setCurrentWeather(currentWeatherResponse.data);
@@ -37,11 +37,11 @@ const Weather = () => {
         setError(null); // Reset error state
 
         const currentWeatherResponse = await axios.get(
-          `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
         );
 
         const forecastResponse = await axios.get(
-          `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
         );
 
         setCurrentWeather(currentWeatherResponse.data);
